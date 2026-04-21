@@ -6,6 +6,9 @@ import { AiOutlineScissor } from "react-icons/ai";
 import { FaCarSide } from "react-icons/fa";
 import { FaBrush } from "react-icons/fa6";
 import { MdComputer } from "react-icons/md";
+import { FaRegClock } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+import { IoShieldOutline } from "react-icons/io5";
 
 const Services = () => {
   return (
@@ -60,34 +63,34 @@ const Services = () => {
           Get connected with local professionals in three simple steps
         </p>
 
-        <div className="w-full flex flex-wrap gap-2 items-center justify-center mt-1 py-6">
+        <div className="w-full flex flex-wrap  items-center justify-evenly mt-1 py-6">
           <div className="flex flex-col justify-center items-center p-2 ">
             <span className="bg-green-900 p-6 rounded-lg m-4">
-              <BsLightning className="text-white text-2xl font-bold" />
+              <CiSearch className="text-white text-5xl font-bold" />
             </span>
-            <h4 className="font-bold text-green-900">Search Services</h4>
+            <h4 className="font-bold text-green-900 text-2xl p-2">Search Services</h4>
             <p className="text-green-900">Find the service you need in your city</p>
           </div>
 
           <div className="flex flex-col justify-center items-center p-2">
             <span className="bg-green-900 p-6 rounded-lg m-4">
-              <GiAutoRepair className="text-white text-xl font-bold" />
+              <IoShieldOutline className="text-white text-5xl font-bold" />
             </span>
-            <h4 className="font-bold text-green-900">Compare Providers</h4>
+            <h4 className="font-bold text-green-900 text-2xl p-2">Compare Providers</h4>
             <p className="text-green-900">Browse verified local professionals</p>
           </div>
 
           <div className="flex flex-col justify-center items-center p-2">
             <span className="bg-green-900 p-6 rounded-lg m-4">
-              <IoHomeOutline className=" text-white text-xl font-bold" />
+              <FaRegClock className=" text-white text-5xl font-bold" />
             </span>
-            <h4 className="font-bold text-green-900">Book Instantly</h4>
+            <h4 className="font-bold text-green-900 text-2xl p-2">Book Instantly</h4>
             <p className="text-green-900">Schedule at your convenience</p>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-8 mt-4 bg-green-800 p-6">
+      <div className="flex flex-wrap justify-center items-center gap-8 mt-4 bg-green-800 p-6">
         <span className="m-10 p-4">
             <h2 className="mx-2 mt-2 p-2 font-extrabold text-white text-5xl">50K +</h2>
             <p className="p-2 text-white">Active Professionals</p>
@@ -108,14 +111,45 @@ const Services = () => {
         <button className="m-8 py-4 px-10 rounded-4xl bg-white text-2xl text-green-900 font-bold">Get Started Now </button>
       </div>
 
-      <div className="bg-green-900">
-        <span>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-
+      <div className=" text-white bg-green-900 flex justify-evenly p-6 border-b-2">
+        <span className="flex flex-col p-4">
+            <h2 className="text-white font-bold mb-2">LocalServe</h2>
+            <p className="text-white">Your trusted platform for local service bookings</p>
         </span>
+
+        <span className="flex flex-col p-4">
+          <h2 className="text-white font-bold mb-2">Services</h2>
+          <ul className="text-white">
+            <li>Home Repair</li>
+            <li>Cleaning</li>
+            <li>Beauty</li>
+            <li>Auto Services</li>
+          </ul>
+        </span>
+
+        <span className="flex flex-col p-4">
+          <h2 className="text-white font-bold mb-2">Company</h2>
+          <ul className="text-white">
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </span>
+
+        <span className="flex flex-col p-4">
+          <h2 className="text-white font-bold mb-2">Support</h2>
+          <ul className="text-white">
+            <li>Help Centre</li>
+            <li>Terms of Service</li>
+            <li>Privacy And Policy</li>
+            <li>Trust & Safety</li>
+          </ul>
+        </span>
+      </div>
+
+      <div className="text-white bg-green-900 flex justify-center p-10">
+        <h2 className="text-green-400">&copy 2026 LocalServe. All rights reserved.</h2>
       </div>
     </>
   );

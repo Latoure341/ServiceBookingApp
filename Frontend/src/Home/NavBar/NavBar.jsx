@@ -3,7 +3,7 @@ import React from 'react'
 const NavBar = () => {
   return (
     <section className='flex flex-wrap justify-between content-center p-4 bg-green-900'>
-      <span className='text-green-400 font-extrabold text-xl'>LocalServiceBooking</span>
+      <span className='text-green-400 font-extrabold text-xl'>LocalServe</span>
       
       <div className='flex gap-6'>
         <span className='text-green-400'>Services</span>

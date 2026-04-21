@@ -6,7 +6,7 @@ const cta = () => {
   return (
     <div className='bg-green-900 px-4 py-6'>
       <p className='mt-4 mb-2 text-green-400'>Connecting you with local experts</p>
-      <h1 className='text-9xl font-extrabold text-white mb-6 py-4'>Book Local Services in Minutes</h1>
+      <h1 className='md:text-9xl font-extrabold text-white mb-6 py-4 text-6xl'>Book Local Services in Minutes</h1>
       <p className='mt-6 mb-6 px-4 text-green-300'>Find trustd professionals in your city. From home repair to beauty services. book instantly</p>
 
       <div className='flex items-center gap-4 bg-white py-2 px-4 m-4 rounded w-3/5'>
