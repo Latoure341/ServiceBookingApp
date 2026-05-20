@@ -9,46 +9,49 @@ import { MdComputer } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { IoShieldOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="flex flex-col flex-wrap items-center justify-center mt-6 p-4">
-        <h1 className="text-black text-4xl font-bold py-4">Popular Services</h1>
-        <p className="text-green-900 text-lg mb-4">
+      <div className="mx-auto mt-6 flex max-w-6xl flex-col items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+        <h1 className="py-4 text-center text-3xl font-bold text-black sm:text-4xl">Popular Services</h1>
+        <p className="mb-4 text-center text-base text-green-900 sm:text-lg">
           Browse our most requested services
         </p>
 
-        <div className="flex flex-wrap gap-4 items-center justify-center mt-6 py-6 w-3/5 ">
-          <span className="bg-green-900 p-10 rounded-lg">
+        <div className="mt-6 grid w-full grid-cols-1 gap-4 py-6 sm:grid-cols-2 lg:grid-cols-4">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <BsLightning className="text-white text-2xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">Electrician</h2>
           </span>
-          <span className="bg-green-900 p-10 rounded-lg">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <GiAutoRepair className="text-white text-xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">Home repair</h2>
           </span>
-          <span className="bg-green-900 p-10 rounded-lg">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <IoHomeOutline className="text-white text-xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">Cleaning</h2>
           </span>
-          <span className="bg-green-900 p-10 rounded-lg">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <GiAutoRepair className="text-white text-xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">Plumbing</h2>
           </span>
-          <span className="bg-green-900 p-10 rounded-lg">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <MdComputer className="text-white text-xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">IT Support</h2>
           </span>
-          <span className="bg-green-900 p-10 rounded-lg">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <FaCarSide className="text-white text-xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">Auto Service</h2>
           </span>
-          <span className="bg-green-900 p-10 rounded-lg">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <FaBrush className="text-white text-xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">Painting</h2>
           </span>
-          <span className="bg-green-900 p-10 rounded-lg">
+          <span className="flex min-h-40 flex-col items-center justify-center rounded-lg bg-green-900 p-6 text-center sm:p-8">
             <AiOutlineScissor className="text-white text-xl font-bold" />
             <h2 className="text-white text-lg font-bold mt-6">
               Beauty & Salon
@@ -57,14 +60,14 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="w-screen flex flex-col flex-wrap items-center justify-center mt-6 p-4">
-        <h1 className="text-black text-4xl font-bold py-4">How It Works</h1>
-        <p className="text-green-900 text-lg mb-4">
+      <div className="mx-auto mt-6 flex max-w-6xl flex-col items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+        <h1 className="py-4 text-center text-3xl font-bold text-black sm:text-4xl">How It Works</h1>
+        <p className="mb-4 text-center text-base text-green-900 sm:text-lg">
           Get connected with local professionals in three simple steps
         </p>
 
-        <div className="w-full flex flex-wrap  items-center justify-evenly mt-1 py-6">
-          <div className="flex flex-col justify-center items-center p-2 ">
+        <div className="mt-1 grid w-full grid-cols-1 gap-8 py-6 md:grid-cols-3">
+          <div className="flex flex-col items-center justify-center p-2 text-center">
             <span className="bg-green-900 p-6 rounded-lg m-4">
               <CiSearch className="text-white text-5xl font-bold" />
             </span>
@@ -72,7 +75,7 @@ const Services = () => {
             <p className="text-green-900">Find the service you need in your city</p>
           </div>
 
-          <div className="flex flex-col justify-center items-center p-2">
+          <div className="flex flex-col items-center justify-center p-2 text-center">
             <span className="bg-green-900 p-6 rounded-lg m-4">
               <IoShieldOutline className="text-white text-5xl font-bold" />
             </span>
@@ -80,7 +83,7 @@ const Services = () => {
             <p className="text-green-900">Browse verified local professionals</p>
           </div>
 
-          <div className="flex flex-col justify-center items-center p-2">
+          <div className="flex flex-col items-center justify-center p-2 text-center">
             <span className="bg-green-900 p-6 rounded-lg m-4">
               <FaRegClock className=" text-white text-5xl font-bold" />
             </span>
@@ -90,28 +93,30 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-8 mt-4 bg-green-800 p-6">
-        <span className="m-10 p-4">
-            <h2 className="mx-2 mt-2 p-2 font-extrabold text-white text-5xl">50K +</h2>
+      <div className="mt-4 grid grid-cols-1 gap-4 bg-green-800 p-6 text-center sm:grid-cols-3">
+        <span className="p-4">
+            <h2 className="mx-2 mt-2 p-2 text-4xl font-extrabold text-white sm:text-5xl">50K +</h2>
             <p className="p-2 text-white">Active Professionals</p>
         </span>
-        <span className="m-10 p-4">
-            <h2 className="mx-2 mt-2 p-2 font-extrabold text-white text-5xl">100K +</h2>
+        <span className="p-4">
+            <h2 className="mx-2 mt-2 p-2 text-4xl font-extrabold text-white sm:text-5xl">100K +</h2>
             <p className="p-2 text-white">Cities Covered</p>
         </span>
-        <span className="m-10 p-4">
-            <h2 className="mx-2 mt-2 p-2 font-extrabold text-white text-5xl">1M +</h2>
+        <span className="p-4">
+            <h2 className="mx-2 mt-2 p-2 text-4xl font-extrabold text-white sm:text-5xl">1M +</h2>
             <p className="p-2 text-white">Services Booked</p>
         </span>
       </div>
       
-      <div className="flex flex-col justify-center items-center bg-green-700 p-8">
-        <h2 className="mx-2 mt-12 pt-10 px-6 font-extrabold text-white text-5xl">Ready to Book Your Next Service?</h2>
-        <p className="p-4 text-white text-xl">Join thousands of satisfied customers finding trusted local professionals every day.</p>
-        <button className="m-8 py-4 px-10 rounded-4xl bg-white text-2xl text-green-900 font-bold">Get Started Now </button>
+      <div className="flex flex-col items-center justify-center bg-green-700 px-4 py-12 text-center sm:px-8">
+        <h2 className="max-w-4xl px-2 text-3xl font-extrabold text-white sm:text-5xl">Ready to Book Your Next Service?</h2>
+        <p className="max-w-3xl p-4 text-base text-white sm:text-xl">Join thousands of satisfied customers finding trusted local professionals every day.</p>
+        <button
+        onClick={()=>{navigate("/signin")}} 
+        className="hover:shadow-xl hover:bg-gray-200 cursor-pointer mt-4 rounded-4xl bg-white px-8 py-4 text-xl font-bold text-green-900 sm:text-2xl">Get Started Now</button>
       </div>
 
-      <div className=" text-white bg-green-900 flex justify-evenly p-6 border-b-2">
+      <div className="grid grid-cols-1 gap-4 border-b-2 bg-green-900 p-6 text-white sm:grid-cols-2 lg:grid-cols-4">
         <span className="flex flex-col p-4">
             <h2 className="text-white font-bold mb-2">LocalServe</h2>
             <p className="text-white">Your trusted platform for local service bookings</p>
@@ -148,7 +153,7 @@ const Services = () => {
         </span>
       </div>
 
-      <div className="text-white bg-green-900 flex justify-center p-10">
+      <div className="flex justify-center bg-green-900 p-8 text-center text-white sm:p-10">
         <h2 className="text-green-400">&copy 2026 LocalServe. All rights reserved.</h2>
       </div>
     </>

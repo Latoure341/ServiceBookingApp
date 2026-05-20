@@ -1,10 +1,10 @@
-import './App.css'
-import Home from './Home/Home'
+import Router  from './Router.jsx';
+
 function App() {
 
   return (
     <>
-      <Home />
+      <Router />
     </>
   )
 }
