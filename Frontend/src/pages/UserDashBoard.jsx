@@ -1,6 +1,7 @@
 import React from "react";
 import { CiFilter } from "react-icons/ci";
 import { IoIosNotificationsOutline, IoMdSearch } from "react-icons/io";
+import { GiAutoRepair } from "react-icons/gi";
 
 const UserDashBoard = () => {
   return (
@@ -55,15 +56,31 @@ const UserDashBoard = () => {
         </span>
       </div>
 
-      <div className="container-fluid px-6 py-4 flex gap-5">
-        <div className="w-3/4">
-          <span>
+      <div className="container-fluid px-6 py-4 flex gap-6">
+        <div className="w-3/4 p-2">
+          <span className="flex justify-between">
             <h3>Upcoming Bookings</h3>
-            <p>view all</p>
+            <p>View all</p>
           </span>
+          <div className="flex py-4 px-2 items-start justify-between">
+            <div className="flex items-start py-2 gap-2">
+              <span className="p-2 bg-green-500">
+                <GiAutoRepair />
+              </span>
+              <span>
+                <h1>Plumbing</h1>
+                <p>Name of a plumber</p>
+                <p>Date Details</p>
+                <p>Confirmation and Link of the details</p>
+              </span>
+            </div>
+            <span></span>
+          </div>
         </div>
-        <div className="w-1/4">
-          <p>Aside</p>
+        <div className="w-1/4 flex justify-center p-2">
+          <span className="bg-green-800 w-full text-center text-white">
+            Aside
+          </span>
         </div>
       </div>
     </>
