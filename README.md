@@ -16,6 +16,21 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
+## Authentication setup
+
+The sign-in and account creation screens use Supabase Auth. Add your project URL
+and anon key to a `.env` file in the project root:
+
+```env
+EXPO_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+EXPO_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+Restart Expo after changing environment variables. Email/password sign-in,
+account creation, and password reset require these values. Social sign-in
+buttons are shown as design placeholders until their OAuth providers are
+configured.
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)

@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from 'react';
-import { supabase } from '../lib/superbase/client';
+import { createContext, useContext, useState } from "react";
+import { getSupabaseClient } from "../lib/superbase/client";
 
 export interface User {
     id: string;
@@ -17,32 +17,40 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider = ({children}: {children: React.ReactNode}) => {
-    const [ user, setUser ] = useState<User | null>(null);
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const [user, setUser] = useState<User | null>(null);
 
-    const login = async (email: string, password: string) => {
+  const signup = async (email: string, password: string) => {
+    const { data, error } = await getSupabaseClient().auth.signUp({
+      email,
+      password,
+    });
 
+    if (error) {
+      throw error;
     }
-    const signup = async (email: string, password: string) => {
-        const { data, error } = await supabase.auth.signUp({
-            email,
-            password
-        });
-        if(error) throw error;
-        if(data.user) {
-            console.log(user);
-        }
+
+    if (data.user) {
+      setUser({
+        id: data.user.id,
+        name: data.user.user_metadata.full_name ?? "",
+        email: data.user.email ?? email,
+        username: data.user.user_metadata.username ?? "",
+      });
     }
-    
-    return (
-        <AuthContext.Provider value={{ user, signUp: signup }}> { children } </AuthContext.Provider>
-    )
-}
+  };
+
+  return (
+    <AuthContext.Provider value={{ user, signUp: signup }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
 export const useAuth = () => {
-    const context = useContext(AuthContext);
-    if(context === undefined) {
-        throw new Error('useAuth must be used within an AuthProvider');
-    }
-    return context;
-}
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
+};
